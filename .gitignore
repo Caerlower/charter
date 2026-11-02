@@ -33,3 +33,8 @@ contracts/lib
 
 contracts/.deploy
 contracts/broadcast
+
+# Local Netlify / Vercel folders
+.netlify
+.vercel
+apps/*/.vercel

@@ -10,6 +10,8 @@ Charter: Human Not Present payments — Intent Mandates for AI agents settling o
 
 ## Links
 
+- Live website: https://charter-onchain.vercel.app
+- Live API: https://charter-hsp-api.netlify.app
 - GitHub: https://github.com/Caerlower/charter
 - HSP docs: https://hsp-hackathon.hashkeymerchant.com/docs
 - HashFans: https://hashfans.io/
@@ -41,5 +43,5 @@ Charter: Human Not Present payments — Intent Mandates for AI agents settling o
 
 ## Blockers / honesty
 
-- Live MCP settle needs IP allowlist from HSP Ops.
+- Live MCP settle needs IP allowlist from HSP Ops. Ask Ops to allowlist Netlify egress **`18.224.150.234`** (team **Charter**). Laptop IP alone is not enough for the hosted API.
 - Mainnet MandateVault must be deployed before demo selection if organizers enforce the mainnet rule strictly.

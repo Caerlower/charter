@@ -18,7 +18,11 @@ Set `MERCHANT_NAME=Charter` so `expected_merchant_name` matches hackathon team r
 
 MCP QA is Cloudflare-gated. Send a stable public egress IP to HSP Ops for team **Charter**.
 
-Mobile hotspots rotate — prefer home WiFi or a hosted API egress (e.g. Render).
+**Send Ops these IPs (team Charter):**
+- Live API (Netlify) egress: `18.224.150.234` — required for settle from https://charter-hsp-api.netlify.app
+- Local laptop egress (rotates): check `curl -s https://api.ipify.org` (currently often `103.216.70.234` on home WiFi)
+
+Mobile hotspots rotate — prefer home WiFi or the hosted Netlify egress above.
 
 ## Env
 

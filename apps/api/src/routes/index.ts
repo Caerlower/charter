@@ -25,6 +25,19 @@ export const router: Router = Router();
 router.use("/v1", agentV1);
 
 router.get("/health", async (_req, res) => {
+  let egressIp: string | null = null;
+  try {
+    const ipRes = await fetch("https://api.ipify.org?format=json", {
+      signal: AbortSignal.timeout(4000),
+    });
+    if (ipRes.ok) {
+      const body = (await ipRes.json()) as { ip?: string };
+      egressIp = body.ip ?? null;
+    }
+  } catch {
+    egressIp = null;
+  }
+
   const hsp =
     config.hspMode === "mcp"
       ? await probeHspMcp()
@@ -35,6 +48,7 @@ router.get("/health", async (_req, res) => {
     tagline: "Human Not Present payments. Website for you, API for agents, settlement on HSP.",
     hspMode: config.hspMode,
     hspMcp: hsp,
+    egressIp,
     merchantName: config.merchantName,
     vaultMode: vaultMode(),
     chainId: config.chainId,

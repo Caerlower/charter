@@ -8,6 +8,8 @@ Approve an Intent Mandate once. Issue a Bearer key to Claude/Grok. Agents search
 | --- | --- |
 | **Track** | HashKey Chain Horizon · **Track 2 — Agent Payments & A2A Settlement** |
 | **Repo** | [github.com/Caerlower/charter](https://github.com/Caerlower/charter) |
+| **Live site** | [charter-onchain.vercel.app](https://charter-onchain.vercel.app) |
+| **Live API** | [charter-hsp-api.netlify.app](https://charter-hsp-api.netlify.app) |
 | **HSP** | Official Agentic Payment MCP (`prepare → sign → finalize → submit → query`) |
 | **Team reporting name** | `Charter` (`MERCHANT_NAME` / `expected_merchant_name`) |
 
@@ -77,6 +79,16 @@ Aligned with [HashKey Chain Horizon (Mumbai)](https://www.hackathonradar.com/dat
 ---
 
 ## Deployments
+
+### Public product
+
+| Surface | URL |
+| --- | --- |
+| **Website / desk** | https://charter-onchain.vercel.app |
+| **API** | https://charter-hsp-api.netlify.app |
+| Health | https://charter-hsp-api.netlify.app/api/health |
+
+Live API runs `HSP_MODE=mock` until HSP Ops allowlists the **Netlify function egress IP** (see `/api/health` → `egressIp`). Laptop WiFi allowlisting does not cover cloud settle.
 
 ### Ethereum Sepolia (hackathon contract testing)
 

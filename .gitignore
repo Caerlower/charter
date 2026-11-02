@@ -30,3 +30,6 @@ contracts/lib
 .DS_Store
 *.log
 .cursor
+
+contracts/.deploy
+contracts/broadcast

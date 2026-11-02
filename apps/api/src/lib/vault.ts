@@ -164,7 +164,7 @@ class MemoryVault {
 const memory = new MemoryVault();
 
 function provider() {
-  return new JsonRpcProvider(config.rpcUrl);
+  return new JsonRpcProvider(config.vaultRpcUrl);
 }
 
 function ownerSigner() {

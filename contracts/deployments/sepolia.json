@@ -1,0 +1,10 @@
+{
+  "chainId": 11155111,
+  "rpc": "https://ethereum-sepolia-rpc.publicnode.com",
+  "explorer": "https://sepolia.etherscan.io",
+  "usdc": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+  "mandateVault": "0x7C55AFCB871dA42aa855509f02A75b6AFeF15257",
+  "owner": "0x9Dd7F2548209b763edcc7e9BfCf0b2E4Ea98C0C8",
+  "agent": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "deployTx": "0x5467cf30795d9b9d66d8d64b18b8a4c846f3389d6e4b749971e5372c55029d10"
+}

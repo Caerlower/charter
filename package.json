@@ -10,7 +10,8 @@
     "build": "pnpm --filter @charter/api build && pnpm --filter @charter/web build",
     "smoke": "pnpm --filter @charter/api smoke",
     "test:contracts": "cd contracts && forge test -vv",
-    "deploy:local": "cd contracts && forge script script/Deploy.s.sol --rpc-url http://127.0.0.1:8545 --broadcast"
+    "deploy:local": "cd contracts && DEPLOY_MOCK_USDC=true forge script script/Deploy.s.sol:Deploy --rpc-url http://127.0.0.1:8545 --broadcast",
+    "deploy:sepolia": "cd contracts && ./script/deploy-sepolia.sh"
   },
   "engines": {
     "node": ">=20"

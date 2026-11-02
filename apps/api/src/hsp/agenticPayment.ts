@@ -83,11 +83,11 @@ function selectNetworkAndToken(chainConfig: unknown): {
       ? (asRecord(networks).networks as ChainNetwork[])
       : [root as ChainNetwork];
 
+  // Prefer HashKey QA network from MCP even if MandateVault is on Sepolia.
   const preferred =
-    list.find((n) => {
-      const id = Number(n.chain_id ?? n.chainId ?? 0);
-      return id === config.chainId || String(n.network ?? "").includes("hashkey");
-    }) ?? list[0];
+    list.find((n) => String(n.network ?? "").toLowerCase().includes("hashkey")) ??
+    list.find((n) => Number(n.chain_id ?? n.chainId ?? 0) === config.chainId) ??
+    list[0];
 
   if (!preferred) throw new Error("get_chain_config returned no networks");
 

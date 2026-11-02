@@ -1,0 +1,77 @@
+:root {
+  --bg: #eef1f6;
+  --surface: #ffffff;
+  --ink: #0a0f1a;
+  --muted: #3f4a5c;
+  --line: rgba(10, 15, 26, 0.12);
+  --blue: #1d4ed8;
+  --blue-deep: #1e3a8a;
+  --green: #047857;
+  --font: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --display: "Plus Jakarta Sans", "IBM Plex Sans", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #070b14;
+  overscroll-behavior: none;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  line-height: 1.55;
+  background: #070b14;
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  background: #070b14;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: var(--blue);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: rgba(29, 78, 216, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

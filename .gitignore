@@ -1,0 +1,32 @@
+# dependencies
+node_modules
+.pnpm-store
+
+# build
+dist
+*.tsbuildinfo
+apps/web/dist
+
+# env / secrets
+.env
+.env.*
+!.env.example
+apps/api/keys/*.pem
+*.pem
+
+# local runtime data
+apps/api/data/
+apps/data/
+
+# foundry
+contracts/out
+contracts/cache
+contracts/broadcast
+contracts/lib
+
+# editors / os
+.idea
+.vscode
+.DS_Store
+*.log
+.cursor

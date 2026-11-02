@@ -1,0 +1,19 @@
+{
+  "name": "charter",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Human Not Present payments — Intent Mandates for AI agents on HashKey HSP",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @charter/api --filter @charter/web dev",
+    "dev:api": "pnpm --filter @charter/api dev",
+    "dev:web": "pnpm --filter @charter/web dev",
+    "build": "pnpm --filter @charter/api build && pnpm --filter @charter/web build",
+    "smoke": "pnpm --filter @charter/api smoke",
+    "test:contracts": "cd contracts && forge test -vv",
+    "deploy:local": "cd contracts && forge script script/Deploy.s.sol --rpc-url http://127.0.0.1:8545 --broadcast"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@9.15.0"
+}
